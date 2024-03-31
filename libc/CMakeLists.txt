@@ -2,8 +2,8 @@ file(GLOB fslc_SRC src/*.c)
 file(GLOB fslc_INC include/fslc/*.h)
 file(GLOB fslc_SINC include/*.h)
 
-include_directories(include/fslc)
 add_library(fslc ${fslc_SRC})
+target_include_directories(fslc PUBLIC include/fslc)
 
 install(TARGETS fslc DESTINATION lib)
 install(FILES ${fslc_SINC} DESTINATION include)
