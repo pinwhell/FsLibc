@@ -5,7 +5,7 @@ file(GLOB fslc_SINC include/*.h)
 add_library(fslc ${fslc_SRC})
 target_include_directories(fslc PUBLIC include/fslc)
 if(NOT ENABLE_STANDARD_SYMNAMES)
-	target_compile_definitions(fslc PUBLIC ALT_FSLC_NAMES)
+	target_compile_definitions(fslc INTERFACE ALT_FSLC_NAMES)
 endif()
 
 install(TARGETS fslc DESTINATION lib)
