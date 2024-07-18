@@ -20,6 +20,7 @@
 #define fslc_strpbrk    strpbrk
 #define fslc_strspn     strspn
 #define fslc_strtok_r   strtok_r
+#define fslc_strcat     strcat
 
 #endif /* ALT_FSLC_NAMES */
 
@@ -43,6 +44,7 @@ extern "C" {
     char *fslc_strpbrk(const char *str, const char *delim);
     size_t fslc_strspn(const char *str, const char *delim);
     char *fslc_strtok_r(char *str, const char *delim, char **save_p);
+    char* fslc_strcat(char* destination, const char* source);
 
 #ifdef __cplusplus
 } /* extern "C" */
